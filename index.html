@@ -15,94 +15,132 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body class="bg-black text-white bg-animated">
+<body class="relative min-h-screen overflow-x-hidden text-white">
+ <body class="relative min-h-screen overflow-x-hidden text-white">
 
-    <!-- Hero -->
-     <section class="min-h-screen flex flex-col items-center justify-center text-center px-6">
+  <div class="min-h-screen bg-animated desktop-shell">
+  <!-- Top neon glow bar -->
+  <div class="absolute top-0 left-0 w-full h-[6px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-40"></div>
 
-        <!-- pulsing logo -->
-        <img src="/images/logo.jpg" alt="WebDevLeo Logo"
-            class="w-48 mb-6 logo-glow" />
+  <!-- Background image layers -->
 
-        <h1 class="text-base md:text-xl font-semibold text-gray-300 neon">
-            Premium Web Services
-        </h1>
+<!-- LEFT background container -->
+<div class="pointer-events-none absolute top-0 left-0 h-full w-[62%] bg-desktop">
+    
+    <!-- LEFT background image -->
+    <img
+      src="/images/background-left.webp"
+      alt=""
+      aria-hidden="true"
+      class="h-full w-full object-cover opacity-90 
+             [mask-image:linear-gradient(to_right,black,transparent)]"
+    />
+</div>
 
-        <p class="text-2xl md:text-3xl mt-3 text-purple-300 neon">
-            New Website Launching Soon!
-        </p>
 
-        <p class="mt-4 text-lg text-gray-300 max-w-xl">
-            Professional Websites & Advanced Systems - Built for Results
-        </p>
+<!-- RIGHT background container -->
+<div class="pointer-events-none absolute top-0 right-0 h-full w-[62%] bg-desktop">
+    
+    <!-- RIGHT background image -->
+    <img
+      src="/images/background-right.webp"
+      alt=""
+      aria-hidden="true"
+      class="h-full w-full object-cover opacity-90 
+             [mask-image:linear-gradient(to_left,black,transparent)]"
+    />
+</div>
 
-        <!-- Service Boxes -->
-        <div class="grid md:grid-cols-2 gap-10 mt-16 w-full max-w-5xl">
+
+
+  <!-- Foreground content -->
+    <section class="relative z-10 min-h-screen flex flex-col items-center justify-center text-center px-6">
+
+    <!-- pulsing logo -->
+    <img src="/images/logo.jpg" alt="WebDevLeo Logo"
+        class="w-48 mb-6 logo-glow mt-1.5" />
+
+    <h1 class="text-base md:text-xl font-semibold text-gray-300 neon">
+        Premium Web Services
+    </h1>
+
+    <p class="text-2xl md:text-3xl mt-3 text-purple-300 neon">
+        New Website Launching Soon!
+    </p>
+
+    <p class="mt-4 text-lg text-gray-300 max-w-xl">
+        Professional Websites & Advanced Systems - Built for Results
+    </p>
+
+    <!-- Service Boxes -->
+    <div class="grid md:grid-cols-2 gap-10 mt-16 w-full max-w-5xl">
         
-            <!-- Websites -->
-             <div class="rounded-2xl p-8 text-center border border-purple-500 animated-border transition-transform hover:-translate-y-2">
-                <h2 class="text-3xl font-bold text-purple-300 neon">Stunning Websites</h2>
-                <p class="text-2xl font-semibold mt-2 text-white">From £249.99</p>
+        <!-- Websites -->
+         <div class="rounded-2xl p-8 text-center border border-purple-500 animated-border transition-transform hover:-translate-y-2">
+            <h2 class="text-3xl font-bold text-purple-300 neon">Stunning Websites</h2>
+            <p class="text-2xl font-semibold mt-2 text-white">From £249.99</p>
 
-                <ul class="mt-6 space-y-2 text-gray-300 text-lg">
-                    <li>Custom Designs</li>
-                    <li>Multi-Page Websites</li>
-                    <li>Mobile Responsive</li>
-                    <li>Portfolio Sites</li>
-                    <li>Menu / Price List Sites</li>
-                    <li>Contact Forms & Much more..</li>
-                </ul>
+            <ul class="mt-6 space-y-2 text-gray-300 text-lg">
+                <li>Custom Designs</li>
+                <li>Multi-Page Websites</li>
+                <li>Mobile Responsive</li>
+                <li>Portfolio Sites</li>
+                <li>Menu / Price List Sites</li>
+                <li>Contact Forms & Much more..</li>
+            </ul>
 
-                <p class="mt-6 text-purple-400 italic text-lg">Fast. Affordable. Premium.</p>
-             </div>
+            <p class="mt-6 text-purple-400 italic text-lg">Fast. Affordable. Premium.</p>
+         </div>
 
-             <!-- Systems -->
-              <div class="rounded-2xl p-8 text-center border border-pink-500 animated-border-pink transition-transform hover:-translate-y-2">
-                <h2 class="text-3xl font-bold text-pink-300 neon">Advanced Systems</h2>
-                <p class="text-2xl font-semibold mt-2 text-white">From £499.99</p>
-              
+         <!-- Systems -->
+          <div class="rounded-2xl p-8 text-center border border-pink-500 animated-border-pink transition-transform hover:-translate-y-2">
+            <h2 class="text-3xl font-bold text-pink-300 neon">Advanced Systems</h2>
+            <p class="text-2xl font-semibold mt-2 text-white">From £499.99</p>
+          
 
-                <ul class="mt-6 space-y-2 text-gray-300 text-lg">
-                    <li>E-Commerce Platforms</li>
-                    <li>Booking Systems</li>
-                    <li>Custom Web Apps</li>
-                    <li>Database Solutions</li>
-                    <li>Custom Programs</li>
-                    <li>And Much More..</li>
-                </ul>   
-                
-                <p class="mt-6 text-pink-400 italic text-lg">Powerful Systems • Built for Results</p>
+            <ul class="mt-6 space-y-2 text-gray-300 text-lg">
+                <li>E-Commerce Platforms</li>
+                <li>Booking Systems</li>
+                <li>Custom Web Apps</li>
+                <li>Database Solutions</li>
+                <li>Custom Programs</li>
+                <li>And Much More..</li>
+            </ul>   
+            
+            <p class="mt-6 text-pink-400 italic text-lg">Powerful Systems • Built for Results</p>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="mt-16 text-center space-y-3 contact-wrap">
+
+            <p class="text-gray-400 text-lg mb-4">Get in touch:</p>
+
+            <div class="contact-list">
+                <div class="contact-item contact-facebook">
+                    <i class="fa-brands fa-facebook-f contact-icon"></i>
+                    <a href="https://www.facebook.com/learan.canning" class="contact-text transition-colors">Facebook</a>
+                </div>
+
+                <div class="contact-item contact-email">
+                    <i class="fa-solid fa-envelope contact-icon"></i>
+                    <span class="contact-text transition-colors">learancanning@mail.com</span>
+                </div>
+
+                <div class="contact-item contact-phone">
+                    <i class="fa-solid fa-phone contact-icon"></i>
+                    <span class="contact-text transition-colors">07523383241</span>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Contact -->
-            <div class="mt-16 text-center space-y-3 contact-wrap">
-
-                <p class="text-gray-400 text-lg mb-4">Get in touch:</p>
-
-                <div class="contact-list">
-                    <div class="contact-item contact-facebook">
-                        <i class="fa-brands fa-facebook-f contact-icon"></i>
-                        <a href="https://www.facebook.com/WebDevLeo" class="contact-text transition-colors">Facebook</a>
-                    </div>
-
-                    <div class="contact-item contact-email">
-                        <i class="fa-solid fa-envelope contact-icon"></i>
-                        <span class="contact-text transition-colors">learancanning@mail.com</span>
-                    </div>
-
-                    <div class="contact-item contact-phone">
-                        <i class="fa-solid fa-phone contact-icon"></i>
-                        <span class="contact-text transition-colors">077 8888 8888</span>
-                    </div>
-                </div>
-            </div>
-     </section>
-
-     <!-- Footer -->
+    <!-- Footer -->
     <footer class="text-center py-6 text-gray-500 text-sm">
         &copy; 2026 WebDevLeo. All rights reserved.
     </footer>
+    <!-- Bottom neon glow bar -->
+    <div class="absolute bottom-0 left-0 w-full h-[5px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-40 pointer-events-none"></div>
 
 </body>
 </html>
