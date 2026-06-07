@@ -1,0 +1,158 @@
+
+/* Pulsing Logo Glow */
+@keyframes pulseGlow {
+    0% { filter: drop-shadow(0 0 10px #a987d8); }
+    50% { filter: drop-shadow(0 0 35px #a987d8); }
+    100% { filter: drop-shadow(0 0 10px #a987d8); }
+}
+
+/* Apply the animation to the logo element when logo ready */
+/* .logo-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+} */
+
+/* Animated Neon Border (Purple) */
+@keyframes neonBorder {
+    0% { box-shadow: 0 0 10px #a987d8, inset 0 0 10px #a987d8; }
+    50% { box-shadow: 0 0 20px #a987d8, inset 0 0 20px #a987d8; }
+    100% { box-shadow: 0 0 10px #a987d8, inset 0 0 10px #a987d8; }
+}
+
+.animated-border {
+    animation: neonBorder 3s ease-in-out infinite;
+}
+
+/* Animated Neon Border (Pink) */
+@keyframes neonBorderPink {
+    0% { box-shadow: 0 0 10px #ff69b4, inset 0 0 10px #ff4fa3; }
+    50% { box-shadow: 0 0 20px #ff69b4, inset 0 0 20px #ff4fa3; }
+    100% { box-shadow: 0 0 10px #ff69b4, inset 0 0 10px #ff4fa3; }
+}
+
+.animated-border-pink {
+    animation: neonBorderPink 3s ease-in-out infinite;
+}
+
+/* Animated Background */
+.bg-animated {
+  background: linear-gradient(135deg, #050505, #0a0012, #000018);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Neon Text Glow */
+.neon {
+    text-shadow:
+        0 0 10px #a987d8,
+        0 0 20px #a987d8,
+        0 0 40px #a987d8;
+}
+
+/* Contact Icons + Text */
+.contact-wrap {
+    max-width: 62rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.25rem;
+    border-radius: 1rem;
+    background: linear-gradient(135deg, rgba(15, 15, 28, 0.72), rgba(20, 8, 30, 0.42));
+    backdrop-filter: blur(4px);
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    padding: 0.25rem 0.35rem;
+}
+
+.contact-item:hover {
+    transform: translateY(-3px);
+}
+
+.contact-icon {
+    font-size: 1.25rem;
+    color: #a987d8;
+    text-shadow: 0 0 10px #a987d8, 0 0 20px #a987d8;
+}
+
+.contact-text {
+   font-size: 1.2em;
+   color: #a987d8;
+   text-shadow: 0 0 8px #a987d8;
+}
+
+.contact-facebook .contact-icon,
+.contact-facebook .contact-text {
+    color: #ff69b4;
+    text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff4fa3;
+}
+
+.contact-email .contact-icon,
+.contact-email .contact-text {
+    background: linear-gradient(90deg, #ff69b4 0%, #a987d8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px rgba(255, 105, 180, 0.55), 0 0 18px rgba(169, 135, 216, 0.55);
+}
+
+.contact-phone .contact-icon,
+.contact-phone .contact-text {
+    color: #a987d8;
+    text-shadow: 0 0 10px #a987d8, 0 0 20px #a987d8;
+}
+
+/* Hover Glow Boost */
+.contact-item:hover .contact-icon,
+.contact-item:hover .contact-text {
+    text-shadow: 0 0 15px #caa7ff, 0 0 30px #caa7ff;
+    color: #ffffff;
+}
+
+.contact-facebook:hover .contact-icon,
+.contact-facebook:hover .contact-text {
+    color: #ffd3eb;
+    text-shadow: 0 0 14px #ff69b4, 0 0 28px #ff4fa3;
+}
+
+.contact-email:hover .contact-icon,
+.contact-email:hover .contact-text {
+    background: linear-gradient(90deg, #ffc2e4 0%, #d7b7ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 14px rgba(255, 105, 180, 0.65), 0 0 24px rgba(169, 135, 216, 0.7);
+}
+
+.contact-phone:hover .contact-icon,
+.contact-phone:hover .contact-text {
+    color: #caa7ff;
+    text-shadow: 0 0 14px #caa7ff, 0 0 24px #caa7ff;
+}
+
+@media (max-width: 640px) {
+    .contact-list {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+}
